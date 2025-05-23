@@ -1,88 +1,71 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-    color: white;
-    overflow-x: hidden;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form-section,
+.todo-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #eee;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   .container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
+    grid-template-columns: 1fr;
   }
-  
-  .video-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    opacity: 0.1;
-    z-index: 0;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 2.5rem;
-  }
-  
-  .input-section,
-  .filters {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  input,
-  select,
-  button {
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-  }
-  
-  input,
-  select {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-  }
-  
-  button {
-    background: #22c55e;
-    color: white;
-    cursor: pointer;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(4px);
-  }
-  
-  .completed {
-    text-decoration: line-through;
-    color: #ccc;
-  }
-  
-  small {
-    font-size: 0.75rem;
-    color: #bbb;
-  }
-  
+}
