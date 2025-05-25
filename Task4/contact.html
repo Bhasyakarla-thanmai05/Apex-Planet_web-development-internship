@@ -23,7 +23,7 @@
     <p>I'd love to hear from you! Whether you have questions or want to collaborate, feel free to reach out.</p>
     <p>Email: <a href="mailto:thanmaibhasyakarla@gmail.com">thanmaibhasyakarla@gmail.com</a></p>
 
-    <form action="mailto:thanmaibhasyakarla@gmail.com" method="POST" enctype="text/plain" style="max-width: 400px; margin: 30px auto;">
+    <form id="contact-form" style="max-width: 400px; margin: 30px auto;">
       <label for="name" style="font-weight:600;">Name</label><br />
       <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 15px; border-radius:6px; border: 1px solid #ccc;" />
 
@@ -35,9 +35,30 @@
 
       <button type="submit" class="btn" style="width: 100%;">Send Message</button>
     </form>
+
+    <p id="form-status" style="text-align:center; color: green; font-weight: 600; display: none; margin-top: 20px;">
+      ✅ Your message has been sent successfully!
+    </p>
   </section>
 </main>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent actual form submission
+    status.style.display = 'block'; // Show the success message
+    form.reset(); // Clear form fields
+
+    // Optional: hide the message after 5 seconds
+    setTimeout(() => {
+      status.style.display = 'none';
+    }, 5000);
+  });
+</script>
 
 <script src="script.js"></script>
 </body>
 </html>
+
