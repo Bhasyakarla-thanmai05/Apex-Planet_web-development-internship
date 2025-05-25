@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Thanmai's Internship Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="contact" class="section">
+    <h1>Contact Me</h1>
+    <p>I'd love to hear from you! Whether you have questions or want to collaborate, feel free to reach out.</p>
+    <p>Email: <a href="mailto:thanmaibhasyakarla@gmail.com">thanmaibhasyakarla@gmail.com</a></p>
+
+    <form action="mailto:thanmaibhasyakarla@gmail.com" method="POST" enctype="text/plain" style="max-width: 400px; margin: 30px auto;">
+      <label for="name" style="font-weight:600;">Name</label><br />
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 15px; border-radius:6px; border: 1px solid #ccc;" />
+
+      <label for="email" style="font-weight:600;">Email</label><br />
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 15px; border-radius:6px; border: 1px solid #ccc;" />
+
+      <label for="message" style="font-weight:600;">Message</label><br />
+      <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 15px; border-radius:6px; border: 1px solid #ccc;"></textarea>
+
+      <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
